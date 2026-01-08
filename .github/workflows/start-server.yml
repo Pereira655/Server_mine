@@ -1,0 +1,14 @@
+name: Ligar Servidor Minecraft
+
+on:
+  workflow_dispatch:
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar arquivos do repositório
+        uses: actions/checkout@v4
+
+      - name: Iniciar servidor
+        run: ./minecraft/run_crafty.sh
